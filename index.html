@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zxuan's Sy'c — Video Editor</title>
+<meta name="description" content="Zuan — Video Editor &amp;. Editing visuals that hit different. Available for paid editing, color grading, motion &amp; creative direction.">
+<meta name="author" content="Zuan">
+<meta name="theme-color" content="#06070d">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Zuan — Video Editor &amp;">
+<meta property="og:description" content="Editing visuals that hit different. Available for paid editing &amp; creative projects.">
+<meta property="og:image" content="assets/zuan.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ══════════════ BACKGROUND ══════════════ -->
+<div class="fx" aria-hidden="true">
+  <div class="fx__grid"></div>
+  <canvas id="fxParticles" class="fx__particles"></canvas>
+  <div class="fx__aurora">
+    <span class="orb orb--1"></span>
+    <span class="orb orb--2"></span>
+    <span class="orb orb--3"></span>
+  </div>
+  <div class="fx__beam"></div>
+  <div class="fx__scanlines"></div>
+  <div class="fx__noise"></div>
+  <div class="fx__vignette"></div>
+</div>
+
+<div class="scrollbar" aria-hidden="true"><i id="scrollBar"></i></div>
+<div class="wipe" id="wipe" aria-hidden="true"></div>
+
+<main>
+
+<!-- ══════════════ PROFILE ══════════════ -->
+<section class="hero">
+
+  <div class="pf">
+    <div class="pf__ring" aria-hidden="true"></div>
+    <div class="pf__frame">
+      <img src="assets/zuan.jpeg" alt="Zuan — Video Editor" width="736" height="736" fetchpriority="high">
+      <span class="pf__sheen" aria-hidden="true"></span>
+    </div>
+    <span class="pf__badge" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+  </div>
+
+  <div class="ident">
+    <h1 class="ident__name"><span class="grad">Zxuan's Sy'c</span></h1>
+    <p class="ident__bio">
+      <span class="bio__head">┄ ˖ ๓ Jasa Edit ┄ ˖ ๓</span>
+      <span class="bio__line">° 22.000</span>
+      <span class="bio__line">° via dana</span>
+      <span class="bio__line">° upload sw jernih (hd)</span>
+      <span class="bio__head">⋆.˚ jasa edit / buy cc ⋆.˚</span>
+      <span class="bio__line">Buy Am prem 1 tahun 10k</span>
+    </p>
+  </div>
+
+
+</section>
+
+<!-- ══════════════ LINKS ══════════════ -->
+<section class="links" id="links">
+
+  <div class="cat reveal">
+    <div class="cat__list">
+
+
+      <a class="card" href="https://wa.me/6282343864557" target="_blank" rel="noopener noreferrer" data-c="wa">
+        <span class="card__icon"><i class="fa-brands fa-whatsapp"></i></span>
+        <span class="card__body">
+          <span class="card__title">Paid Editing <em class="tag tag--hot">Open</em></span>
+          <span class="card__desc">Chat me on WhatsApp </span>
+        </span>
+        <i class="card__go fa-solid fa-chevron-right" aria-hidden="true"></i>
+        <span class="card__sweep" aria-hidden="true"></span>
+      </a>
+
+      <a class="card" href="https://wa.me/6282343864557" data-c="violet">
+        <span class="card__icon"><img src="assets/alight.png" alt="" width="300" height="292" loading="lazy" decoding="async"></span>
+        <span class="card__body">
+          <span class="card__title">CC / AM</span>
+          <span class="card__desc">Chat me on  &amp; WhatsApp</span>
+        </span>
+        <i class="card__go fa-solid fa-chevron-right" aria-hidden="true"></i>
+        <span class="card__sweep" aria-hidden="true"></span>
+      </a>
+
+      <div class="drop">
+        <button class="card card--menu" type="button" data-menu data-c="amber" aria-expanded="false" aria-controls="dropZuan">
+          <span class="card__icon"><i class="fa-solid fa-tower-broadcast"></i></span>
+          <span class="card__body">
+            <span class="card__title">Saluran Official Zuan</span>
+            <span class="card__desc">Klik untuk buka 3 saluran</span>
+          </span>
+          <i class="card__go fa-solid fa-chevron-down" aria-hidden="true"></i>
+          <span class="card__sweep" aria-hidden="true"></span>
+        </button>
+
+        <div class="drop__panel" id="dropZuan">
+          <div class="drop__inner">
+
+            <a class="drop__item" href="https://wa.me/6282343864557" target="_blank" rel="noopener noreferrer" data-c="wa">
+              <span class="drop__ico"><i class="fa-brands fa-whatsapp"></i></span>
+              <span class="drop__txt"><b>Zxuan'𝐬 Sy'c</b><small>Kanal utama · update &amp; promo</small></span>
+              <i class="drop__go fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+
+            <a class="drop__item" href="#" data-c="blue">
+              <span class="drop__ico"><i class="fa-brands fa-whatsapp"></i></span>
+              <span class="drop__txt"><b>Zxuan Mentahan</b><small>Mentahan · tapi tetap update</small></span>
+              <i class="drop__go fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+
+            <a class="drop__item" href="#" data-c="mint">
+              <span class="drop__ico"><i class="fa-brands fa-whatsapp"></i></span>
+              <span class="drop__txt"><b>MENTAHAN V2</b><small>V2 · sama saja, tapi lebih baru</small></span>
+              <i class="drop__go fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span>&copy; <span id="year">2026</span> Zuan Studio</span>
+    <span class="foot__sep">/</span>
+    <span>Made for the edit</span>
+  </footer>
+
+</section>
+
+</main>
+
+<button class="totop" id="toTop" type="button" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <i class="fa-solid fa-circle-check"></i><span id="toastMsg">Copied</span>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
